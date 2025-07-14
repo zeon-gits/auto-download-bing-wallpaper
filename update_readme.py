@@ -13,7 +13,7 @@ def writeToReadme():
         f.write('\n')
 
         filename = datetime.now().strftime("%Y/%m/%d")
-        paths = glob(f'./DownloadedWallpapers/{filename}/*.jpg')
+        paths = glob(f'./DownloadedWallpapers/{filename}.jpg')
         if paths:
             f.write('\n\n## 今日图片\n')
             f.write('\n\n![]({}){} [Download]({})'.format(paths[0], filename, paths[0]))
