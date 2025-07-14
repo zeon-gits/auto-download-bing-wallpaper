@@ -12,7 +12,7 @@ def writeToReadme():
         f.write('Python 每日爬取必应壁纸\n')
         f.write('\n')
 
-        filename = datetime.now().strftime("%Y/%m/%d")
+        filename = datetime.now().strftime("%Y-%m-%d")
         paths = glob(f'./DownloadedWallpapers/{filename}.jpg')
         if paths:
             f.write('\n\n## 今日图片\n')
@@ -24,7 +24,7 @@ def writeToReadme():
         index = 1
         for i in range(30):
             date = datetime.now() - timedelta(days=i)
-            filename = date.strftime("%Y/%m/%d")
+            filename = date.strftime("%Y-%m-%d")
             paths = glob(f'./DownloadedWallpapers/{filename}.jpg')
             if paths:
                 file = "![]({}){} [Download]({})".format(paths[0], filename, paths[0])
