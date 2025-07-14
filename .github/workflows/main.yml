@@ -1,0 +1,38 @@
+name: update-bing-wallpaper
+
+on:
+  schedule:
+    - cron: '0 1 * * *'
+  workflow_dispatch:
+env:
+    TZ: Asia/Shanghai
+    
+
+jobs:
+  update-wallpaper:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.9'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements.txt
+
+      - name: Download Bing wallpaper
+        run: python picurl.py
+
+      - name: Update repository
+        run: |
+          python update_readme.py
+          git config --local user.name "github-actions"
+          git config --local user.email "github-actions@github.com"
+          git add --all
+          git commit -m "`date  "+%B %d, %Y Updated"`"
+          git push
