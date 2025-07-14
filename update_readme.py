@@ -25,7 +25,7 @@ def writeToReadme():
         for i in range(30):
             date = datetime.now() - timedelta(days=i)
             filename = date.strftime("%Y/%m/%d")
-            paths = glob(f'./DownloadedWallpapers/{filename}/*.jpg')
+            paths = glob(f'./DownloadedWallpapers/{filename}.jpg')
             if paths:
                 file = "![]({}){} [Download]({})".format(paths[0], filename, paths[0])
                 f.write('|' + file)
