@@ -9,7 +9,7 @@ def writeToReadme():
         f.write('# Bing Wallpaper\n\n')
 
         f.write('\n')
-        f.write('Python 每日爬取必应壁纸\n')
+        f.write('每日爬取Bing壁纸\n')
         f.write('\n')
 
         filename = datetime.now().strftime("%Y-%m-%d")
