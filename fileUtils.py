@@ -8,9 +8,9 @@ def writeToReadme():
     with open(readme_path, 'w', encoding='utf-8') as f:
         f.write('# Bing Wallpaper\n\n')
 
-        f.write('```\n')
+        f.write('\n')
         f.write('Python 每日爬取必应壁纸\n')
-        f.write('```\n\n')
+        f.write('\n')
 
         filename = datetime.now().strftime("%Y/%m/%d")
         paths = glob(f'./DownloadedWallpapers/{filename}/*.jpg')
