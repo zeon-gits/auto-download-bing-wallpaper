@@ -10,7 +10,7 @@ After cloning this repository to your local machine, you can run picurl.py to sc
 
 
 
-## 最近30天的图片链接
+## Photo Links from the Last 30 Days
 
 
 |      |      |      |
