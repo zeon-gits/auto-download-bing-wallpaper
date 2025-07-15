@@ -9,10 +9,10 @@ def writeToReadme():
         f.write('# Bing Wallpaper\n\n')
 
         f.write('\n')
-        f.write('每日爬取Bing壁纸\n')
+        f.write('每日通过Github Actions自动爬取Bing壁纸\n\n')
         f.write('picurl.py会在当前文件夹创建一个DownloadedWallpapers文件夹,\n')
         f.write('并将下载的壁纸保存到该文件夹中。\n\n')
-        f.write('Clone本仓库后双击运行picurl.py即可下载壁纸\n')
+        f.write('Clone本仓库到本地后双击运行picurl.py即可爬取壁纸\n')
         f.write('\n')
 
         filename = datetime.now().strftime("%Y-%m-%d")
@@ -40,6 +40,7 @@ def writeToReadme():
             f.write('|')
 
         f.write('\n\n')
+        print(f'更新 {readme_path} 成功！')
 
 
 if __name__ == '__main__':
