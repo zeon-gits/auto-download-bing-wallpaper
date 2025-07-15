@@ -10,15 +10,10 @@ Clone本仓库到本地后双击运行picurl.py即可爬取壁纸
 
 
 
-## 今日图片
-
-
-![](./DownloadedWallpapers/2025-07-15.jpg)2025-07-15 [Download](./DownloadedWallpapers/2025-07-15.jpg)
-
 ## 最近30天的图片链接
 
 
 |      |      |      |
 | :----: | :----: | :----: |
-|![](./DownloadedWallpapers/2025-07-15.jpg)2025-07-15 [Download](./DownloadedWallpapers/2025-07-15.jpg)|![](./DownloadedWallpapers/2025-07-14.jpg)2025-07-14 [Download](./DownloadedWallpapers/2025-07-14.jpg)|
+|![](./DownloadedWallpapers/2025-07-14.jpg)2025-07-14 [Download](./DownloadedWallpapers/2025-07-14.jpg)|
 
