@@ -9,19 +9,19 @@ def writeToReadme():
         f.write('# Bing Wallpaper\n\n')
 
         f.write('\n')
-        f.write('每日通过Github Actions自动爬取Bing壁纸\n\n')
-        f.write('picurl.py会在当前文件夹创建一个DownloadedWallpapers文件夹,\n')
-        f.write('并将下载的壁纸保存到该文件夹中。\n\n')
-        f.write('Clone本仓库到本地后双击运行picurl.py即可爬取壁纸\n')
+        f.write('Daily Automated Bing Wallpaper Scraping via Github Actions\n\n')
+        f.write('picurl.py will create a DownloadedWallpapers folder in the current directory,\n')
+        f.write('and save the downloaded wallpaper to that folder.\n\n')
+        f.write('After cloning this repository to your local machine, you can run picurl.py to scrape wallpaper\n')
         f.write('\n')
 
         filename = datetime.now().strftime("%Y-%m-%d")
         paths = glob(f'./DownloadedWallpapers/{filename}.jpg')
         if paths:
-            f.write('\n\n## 今日图片\n')
+            f.write('\n\n## Photo Today\n')
             f.write('\n\n![]({}){} [Download]({})'.format(paths[0], filename, paths[0]))
 
-        f.write('\n\n## 最近30天的图片链接\n')
+        f.write('\n\n## Photo Links from the Last 30 Days\n')
         f.write('\n\n|      |      |      |\n')
         f.write('| :----: | :----: | :----: |\n')
         index = 1
@@ -40,7 +40,7 @@ def writeToReadme():
             f.write('|')
 
         f.write('\n\n')
-        print(f'更新 {readme_path} 成功！')
+        print(f'successfully updated {readme_path}')
 
 
 if __name__ == '__main__':

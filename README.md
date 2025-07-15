@@ -1,12 +1,12 @@
 # Bing Wallpaper
 
 
-每日通过Github Actions自动爬取Bing壁纸
+Daily Automated Bing Wallpaper Scraping via Github Actions
 
-picurl.py会在当前文件夹创建一个DownloadedWallpapers文件夹,
-并将下载的壁纸保存到该文件夹中。
+picurl.py will create a DownloadedWallpapers folder in the current directory,
+and save the downloaded wallpaper to that folder.
 
-Clone本仓库到本地后双击运行picurl.py即可爬取壁纸
+After cloning this repository to your local machine, you can run picurl.py to scrape wallpaper
 
 
 
