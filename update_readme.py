@@ -10,6 +10,9 @@ def writeToReadme():
 
         f.write('\n')
         f.write('每日爬取Bing壁纸\n')
+        f.write('picurl.py会在当前文件夹创建一个DownloadedWallpapers文件夹,\n')
+        f.write('并将下载的壁纸保存到该文件夹中。\n\n')
+        f.write('Clone本仓库后双击运行picurl.py即可下载壁纸\n')
         f.write('\n')
 
         filename = datetime.now().strftime("%Y-%m-%d")
