@@ -19,7 +19,6 @@ jobs:
 
       - name: Install dependencies
         run: |
-          sudo date -s "$(TZ='Asia/Shanghai' date)"
           python -m pip install --upgrade pip
           python -m pip install -r requirements.txt
 
