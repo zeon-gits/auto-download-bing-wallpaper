@@ -3,7 +3,7 @@ import json
 import os
 import datetime
 headers = {
-    'Host': 'www.bing.com',
+    'Host': 'cn.bing.com',
     'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
     'Accept-Encoding': 'gzip, deflate, br',
     'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8',
@@ -11,10 +11,10 @@ headers = {
     "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.6 Safari/605.1.15"
 }
 print("正在获取壁纸链接...")
-page = requests.get("https://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1", headers=headers).text
+page = requests.get("https://cn.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1", headers=headers).text
 data = json.loads(page)
 add = data['images'][0]['url']
-picurl = "https://www.bing.com" + add
+picurl = "https://cn.bing.com" + add
 print("壁纸链接获取成功！")
 print("正在下载壁纸...")
 download = requests.get(picurl, headers=headers)
