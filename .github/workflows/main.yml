@@ -2,7 +2,7 @@ name: update-bing-wallpaper
 
 on:
   schedule:
-    - cron: '55 6 * * *'
+    - cron: '1 7 * * *'
   workflow_dispatch:   
 
 jobs:
