@@ -3,14 +3,17 @@ name: update-bing-wallpaper
 on:
   schedule:
     - cron: '1 7 * * *'
-  workflow_dispatch:   
+  workflow_dispatch:
 
 jobs:
   update-wallpaper:
+    environment: UPDATE_WALLPAPER
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v5
+        with:
+          token: ${{ secrets.UPDATE_WALLPAPER }}
 
       - name: Set up Python
         uses: actions/setup-python@v6
