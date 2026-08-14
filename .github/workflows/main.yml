@@ -10,10 +10,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v5
 
       - name: Set up Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v6
         with:
           python-version: '3.9'
 
@@ -28,8 +28,8 @@ jobs:
       - name: Update repository
         run: |
           python update_readme.py
-          git config --local user.name "github-actions"
-          git config --local user.email "github-actions@github.com"
+          git config --local user.name "zeon-gits"
+          git config --local user.email "111942610+zeon-gits@users.noreply.github.com"
           git add --all
           git commit -m "`date  "+%B %d, %Y Updated"`"
           git push
