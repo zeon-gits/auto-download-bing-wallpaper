@@ -3,14 +3,22 @@ name: update-bing-wallpaper
 on:
   schedule:
     - cron: '1 7 * * *'
-  workflow_dispatch:   
+  workflow_dispatch:
 
 jobs:
   update-wallpaper:
+    environment: UPDATE_WALLPAPER
+    permissions:
+      contents: write
     runs-on: ubuntu-latest
+    env:
+      UPDATE_WALLPAPER: ${{ secrets.UPDATE_WALLPAPER }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v5
+        with:
+          token: ${{ github.token }}
+          persist-credentials: false
 
       - name: Set up Python
         uses: actions/setup-python@v6
@@ -30,6 +38,7 @@ jobs:
           python update_readme.py
           git config --local user.name "zeon-gits"
           git config --local user.email "111942610+zeon-gits@users.noreply.github.com"
+          git config --local credential.helper '!f() { echo username=x-access-token; echo password="$UPDATE_WALLPAPER"; }; f'
           git add --all
           git commit -m "`date  "+%B %d, %Y Updated"`"
           git push
